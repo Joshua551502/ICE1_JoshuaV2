@@ -1,12 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package days;
-
-import Weekdays.Weekdays;
-import java.util.Scanner;
-
 /**This class takes String input from user 
  * and calls method  to print the 
  * name of the day.
@@ -24,12 +15,42 @@ public class Days {
      */
     public static void main(String[] args) {
          
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
+//    Scanner in =new Scanner(System.in);
+//    System.out.println("Enter the day number (one,two,three,four,five) in string");
+//    String code = in.next();
+//    Weekdays t= new Weekdays();
+//    t.nameOfDay(code); 
+        
+ 
+        for (Weekdays day : Weekdays.values()) {
+            System.out.println("Day " + day + " is " + day.getName());
+        }
+    }
+
+
+enum Weekdays {
+    ONE("Monday"),
+    TWO("Tuesday"),
+    THREE("Wednesday"),
+    FOUR("Thursday"),
+    FIVE("Friday"),
+    SIX("Saturday"),
+    SEVEN("Sunday");
+
+    private String name;
+
+    private Weekdays(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+       
+
+    
     }// TODO code application logic here
     
-    
-}
+ 
